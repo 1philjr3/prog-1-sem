@@ -13,21 +13,16 @@ int main() {
     }
 
     printf("\n=== Task 2 ===\n");
-    int i, n;
-    printf("Input your array:\n");
-    scanf("%d", &n);
-    
-    int *arr = (int *) malloc(4 * sizeof(int));//
-    /*arr[0] = 'a';
-    arr[1] = 'b';
-    arr[2] = 'c';
-    arr[3] = 'd';*/
-    for (i = 0; i < n; i++) {
-        printf("arr[%d] = ", i);
-        scanf ("%d", &arr[i]);
+    char* array = (char*)malloc(4 * sizeof(char));
+        array[0] = 'a';
+        array[1] = 'b';
+        array[2] = 'c';
+        array[3] = 'd';
+        // char* array = malloc(4, sizeof(char));
+        for (int i = 0; i < 4; ++i)
+        {
+            printf("%c ", array[i]);
+        }
+        printf("\n");
+        free(array);
     }
-    for (i = 0; i < 4; i++)
-    printf ("\t%d\n", arr[i]);
-    free(arr);
-    return 0;
-}
